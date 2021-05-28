@@ -32,42 +32,48 @@ function App() {
     <>
       <div>
         <center>
-            <form style={{marginTop:"100px" }}
-              onSubmit={(event) => {sub(event)}}>
-                <input type="text" placeholder="Enter The Pin"
+            <form style={{marginTop:"10px" }}
+              onSubmit={(event) => {sub(event)}}
+              className="form">
+                <div className="heading">
+                  WIN-COVID
+                </div>
+                <br/><br/><br/><br/><br/>
+                <input className="pin" size="8" type="text" placeholder="Pin Code"
                   onChange={(e)=>{setPin(e.target.value)}} />
-                  <br/><br/>
-                  <input type="date" 
+                  <br/>
+                  <input type="date" className="date"
                   onChange={(e)=>{setDate(rev(e.target.value))}} />
-                  <br/><br/>
-                <button type="submit">Submit</button>
+                  <br/>
+                <button type="submit" className="submit">SUBMIT</button>
             </form>
+            <span className="span">*Enter Pin-code of area and date to check<br /> if the vaccine is available.</span>
         </center>
     </div>
     <div>
         <center>
-        <h2>Center Details</h2>
-        <table>
+        <h2><u>Center Details</u></h2>
+        <table className="table" cellPadding="2vmin" cellSpacing="0">
           <tr>
-            <th>Name</th>
-            <th>Slots</th>
-            <th>Age</th>
+            <th className="th">Name</th>
+            <th className="th">Slots</th>
+            <th className="th">Age</th>
           </tr>
           {centers.map((center)=>{
             const{center_id,name,sessions}=center;
             return (
               <tr key={center_id}>
-                <td>{name}</td>
-                <td>{sessions[0].available_capacity}</td>
+                <td className="td">{name}</td>
+                <td className="td">{sessions[0].available_capacity}</td>
                 <td>{sessions[0].min_age_limit}+</td>
               </tr>
             )
           })}
         </table>
         <br />
-        <h1>
+        <h2>
         <a href="https://selfregistration.cowin.gov.in/">Book Slot</a>
-        </h1>
+        </h2>
         </center>
 
     </div>

@@ -8,3 +8,59 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.span{
+  color:red;
+}
+.table{
+}
+.th{
+  border-bottom:1px solid blue;
+  border-right: 1px solid blue;
+  border-left: 1px solid blue;
+}
+.td{
+  border-right: 1px solid blue;
+}
+.pin{
+  font-size:medium ;
+  color:black;
+  font-weight: 700;
+  border-radius: 2vmin;
+  opacity: 0.8;
+}
+.date{
+  font-size: large;
+  color:black;
+  font-weight: 700;
+  border-radius: 2vmin;
+  opacity: 0.8;
+  margin-top: 0.5vmin;
+}
+.submit{
+  font-size: large;
+  margin-top: 2vmin;
+  border: 0.4vmin solid blue;
+  border-radius: 4vmin;
+  background-color: grey;
+  color:Black;
+  font-weight: 800;
+}
+.form {
+  background-image: url(./bg.png);
+  background-size: cover;
+  opacity: 0.5;
+  max-width: fit-content;
+  min-height: 50vmin;
+  border-radius: 3vmin;
+  border: 0.5vmin dotted steelblue;
+}
+.heading{
+  margin: 2vmin;
+  padding: 5vmin;
+  width: 25vmin;
+  border: 1vmin double black;
+  border-radius: 3vmin;
+  font-size: 4vmin;
+  font-weight: 900;
+  text-shadow: steelblue 2px 2px;
+}
