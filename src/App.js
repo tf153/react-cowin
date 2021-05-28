@@ -20,11 +20,10 @@ function App() {
     const response=await fetch("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode="+pin+"&date="+date);
     const da=await response.json();
     setCenters(da["centers"]);
-    console.log(centers);
   }
 
   useEffect(()=>{
-    if(count!=1){
+    if(count!==1){
       getData();
     }
   },[count]);
@@ -54,11 +53,12 @@ function App() {
         <center>
         <h2><u>Center Details</u></h2>
         <table className="table" cellPadding="2vmin" cellSpacing="0">
-          <tr>
+          <thead>
             <th className="th">Name</th>
             <th className="th">Slots</th>
             <th className="th">Age</th>
-          </tr>
+          </thead>
+          <tbody>
           {centers.map((center)=>{
             const{center_id,name,sessions}=center;
             return (
@@ -69,13 +69,14 @@ function App() {
               </tr>
             )
           })}
+          </tbody>
         </table>
         <br />
         <h2>
         <a href="https://selfregistration.cowin.gov.in/">Book Slot</a>
         </h2>
+        <div className="copy">©Rahul-Joshi</div>
         </center>
-
     </div>
   </>
   );
