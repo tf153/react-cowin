@@ -33,9 +33,11 @@ function App() {
 
   const notify=(e)=>{
     setPopup(true);
+    setDetails(false);
   }
   const X=()=>{
     setPopup(false);
+    setDetails(true);
   }
   const notify_form=(e)=>{
     e.preventDefault();
