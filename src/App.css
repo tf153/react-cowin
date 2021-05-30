@@ -39,8 +39,12 @@
   border-radius: 2vmin;
   opacity: 0.8;
   margin-top: 0.5vmin;
+  cursor:pointer;
 }
-.submit{
+.notify{
+  opacity: 0.5;
+}
+.submit,.notify{
   font-size: large;
   margin-top: 2vmin;
   border: 0.4vmin solid blue;
@@ -48,6 +52,11 @@
   background-color: grey;
   color:Black;
   font-weight: 800;
+  cursor:pointer;
+  transition: transform 0.2s;
+}
+.submit:hover,.notify:hover{
+  transform: scale(1.2);
 }
 .form {
   background-image: url(./bg.png);
@@ -57,6 +66,7 @@
   min-height: 50vmin;
   border-radius: 3vmin;
   border: 0.5vmin dotted steelblue;
+  box-shadow: 0 0.5vw 1vw 0 rgba(0,0,0,0.2),0 0.5vw 1.5vw 0 rgba(0,0,0,0.19);
 }
 .heading{
   margin: 2vmin;
@@ -67,4 +77,30 @@
   font-size: 4vmin;
   font-weight: 900;
   text-shadow: steelblue 2px 2px;
+}
+
+.popup{
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(250,250,250,0.9);
+}
+.pop-up-open{
+  background-color: rgba(200,200,250,0.3);
+	margin: 8% auto;
+	padding: 1.5vw;
+	border: 1vw double #888;
+  border-radius: 2vw;
+	width: fit-content;
+  box-shadow: 0 0.5vw 1vw 0 rgba(0,0,0,0.2),0 0.5vw 1.5vw 0 rgba(0,0,0,0.19);
+  -webkit-animation: animatezoom 1s;
+  animation: animatezoom 1s
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
 }
